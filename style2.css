@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --off-white--: rgba(251, 251, 251, 1);
+    --pri--: rgba(27, 90, 184, 1);
+    --off-black--: rgb(32, 32, 32);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+}
+
+html {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+body {
+    overflow-x: hidden;
+    max-width: 1600px;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: var(--off-white--);
+    color: var(--off-black--);
+}
+
+body::after {
+    content: "";
+    background: url(images/brick-work.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+  }
+
+header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+    min-height: 200px;
+    height: 25vh;
+  }
+
+header > img {
+    position: absolute;
+    bottom: 33%;
+    width: 75%;
+    -ms-transform: rotate(-4deg); /* IE 9 */
+    transform: rotate(-4deg);
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 28px;
+}
+
+main {
+    display: flex;
+}
+
+#rob {
+    flex: 1 1 25%;
+    text-align: center;
+}
+
+.txt-box {
+    flex: 1 1 40%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "message message"
+        "list credential"
+        "social .";
+}
+
+h2 {
+    grid-area: message;
+    font-weight: 800;
+    font-size: 64px;
+    align-self: center;
+    letter-spacing: -3px;
+    line-height: 0.9;
+}
+
+ul {
+    grid-area: list;
+    list-style: none;
+}
+
+li {
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 1.5rem;
+}
+
+.container-form {
+    flex: 1 1 35%;
+    background-color: orange;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.form-header {
+    display: flex;
+    border-radius: 10px;
+    background-color: var(--pri--);
+    justify-content: center;
+    padding: 1rem;
+}
+
+.form-header > * {
+    height: 120px;
+}
+
+.c2-logo {
+    background: url(images/c2-logo-nobg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 125px;
+}
+
+.trainers {
+    background: url(images/trainers-nobg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 90px;
+}
+
+form {
+    width: 100%;
+    min-width: 280px;
+    max-width: 400px;
+    padding: 0 clamp(2rem, 10vw, 3rem);
+    background-color: rgba(235, 235, 235, 1);
+}
+
+form label {
+    font-size: 14px;
+    font-weight: 100;
+    color: #666666;
+    position: relative;
+    top: 27px;
+    left: 8px;
+}
+
+form label:hover {
+    cursor: text;
+}
+
+.input_field {
+    border: 0;
+    border-radius: 5px;
+    width: 100%;
+    background-color: white;
+    font-size: 16px;
+    padding: 8px;
+    margin-top: 1.5rem;
+}
+
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.input_field:hover {
+    cursor: text;
+}
+
+.input_field:focus {
+    outline: 2px solid var(--pri--);
+    outline-offset: -2px;
+}
+
+textarea:focus {
+    outline: 2px solid var(--pri--);
+    outline-offset: -2px;
+}
+
+#message_input {
+    border: 0;
+    width: 100%;
+    padding: 8px;
+    border-bottom: 2px solid white;
+}
+
+#submit {
+    margin-top: 32px;
+    opacity: 0.5;
+}
+
+.btn {
+    background-color: var(--pri--);
+    border-radius: 5px;
+    width: 100%;
+    padding: 1rem 3rem;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+}
+
