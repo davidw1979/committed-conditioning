@@ -13,7 +13,7 @@ body {
     flex-direction: column;
     position: relative;
     background-color: $offWhite;
-    color: $offBlack;
+    color: $offWhite;
 
     &::after {
         content: "";
@@ -32,20 +32,23 @@ body {
 }
 
 header {
-    height: 30vh;
+    background-color: $priColour;
+    height: 6rem;
     @include flexCenter(column);
+    margin-bottom: 2rem;
     h1 {
+        font-size: 6rem;
         font-family: 'Rokkitt', serif;
         columns: $offBlack;
         font-size: 4rem;
-        letter-spacing: -0.1rem;
-        // width: 80vw;
-        // transform: rotate(-4.5deg);
-    }
-    h2 {
-        font-size: 1.4rem;
-        margin-top: 1rem;
-        color: #494949;
+        letter-spacing: -2%;
+        text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+       
+        .big-letter {
+            font-size: 7rem;
+            color: lighten($priColour, 25%);
+            text-shadow: -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000;
+        }
     }
 }
 
@@ -57,9 +60,8 @@ main {
 
     #rob {
         grid-area: r;
-        @include flexCenter(row);
+        @include flexCenter(column);
         height: 100%;
-        
     }
 
     .txt-box {
@@ -68,11 +70,8 @@ main {
         flex-direction: column;
         gap: 2.2rem;
 
-        h2 {
-            font-size: 3.5rem;
-            font-weight: 600;
-            letter-spacing: -0.2rem;
-            //text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.4);
+        #graffiti {
+            transform: rotate(-4deg);
         }
 
         .bullet-and-badge {
@@ -80,6 +79,7 @@ main {
             display: flex;
             ul {
                 li {
+                    color: $offBlack;
                     font-weight: 300;
                     font-size: 1.6rem;
                     list-style: none;

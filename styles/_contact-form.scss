@@ -7,7 +7,7 @@
 .container-form {
     box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.4);
     position: absolute;
-    bottom: 1px;
+    bottom: -2rem;
     
     .form-header {
         width: 100%;
@@ -19,12 +19,12 @@
 
         .c2-logo {
             background: url(images/c2-logo-nobg.png);
-            width: 97px;
+            width: 79px;
         }
         
         .trainers {
             background: url(images/trainers-nobg.png);
-            width: 72px;
+            width: 58px;
         }
 
         .form-img {
