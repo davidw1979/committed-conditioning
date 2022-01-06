@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Training | Fitness Classes | Committed Conditioning</title>
+    <link rel="stylesheet" href="{% static 'c2_main_app/styles/style.min.css' %}">
+
+    <!--Import FontAwesome icons-->
+    <script src="https://kit.fontawesome.com/27726bfc44.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <nav id="nav-bar" class="nav-bg">
+
+            <div class="branding">
+                <h1>COMMITTED CONDITIONING</h1>
+                <p>Embrace Change It Will Come</p>
+            </div>
+                
+        <div class="nav-links">
+            <div onclick="goTo('#tbc')" class="nav-link">Link 1</div>
+            <div onclick="goTo('#tbc')" class="nav-link">Link 2</div>
+            <div onclick="goTo('#tbc')" class="nav-link">Link 3</div>
+            <div onclick="goTo('#tbc')" class="nav-link">Link 4</div>
+        </div>
+
+        <div class="social">
+            <a href="https://hi-in.facebook.com/committed.conditioning" target="_blank"><i class="fab fa-facebook grow"></i></a>
+            <a href="https://www.instagram.com/committed_conditioning" target="_blank"><i class="fab fa-instagram grow"></i></a>
+        </div>
+
+        <div class="burger">
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+        </div>
+
+    </nav>
+
+    {% block content %}
+    {% endblock content %}
+
+    <!-- <footer>
+        <div class="footer-social">
+            <a href="#" target="_blank"><i class="fab fa-facebook grow"></i></a>
+            <a href="#"><i class="fab fa-instagram grow"></i></a>
+        </div>
+        <p>© 2022 Committed Conditioning. All Rights Reserved.</p>
+        <p>Website design & build by DWW Technology Services.</p>
+    </footer> -->
+
+</body>
+</html>

@@ -1,8 +1,13 @@
 $offWhite: rgba(251, 251, 251, 1);
 $priColour: rgba(27, 90, 184, 1);
-$offBlack: rgb(43, 43, 43);
+$offBlack: rgba(61, 61, 61, 1);
+$teal: rgba(48, 214, 176, 1);
 
-$baseFont: calc(14px + 0.4vw);
+$headFont: 'Raleway', sans-serif;
+$bodyFont: 'Poppins', sans-serif;
+
+$baseFontSize: calc(14px + 0.4vw);
+$h1baseFontSize: calc(26px + 0.5vw);
 
 @mixin flexCenter ($direction) {
     display: flex;
@@ -18,14 +23,15 @@ $baseFont: calc(14px + 0.4vw);
 }
 
 html {   
-    font-family: 'Raleway', sans-serif;
-    font-weight: 500;
-    font-size: clamp(16px, $baseFont, 18px);
+    font-family: $bodyFont;
+    font-size: clamp(16px, $baseFontSize, 18px);
     color: $offBlack;
+    
 }
 
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
+    font-family: $headFont;
 }
 
 // .container {

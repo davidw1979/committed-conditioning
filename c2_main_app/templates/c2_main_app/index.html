@@ -1,12 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Committed Conditioning</title>
-</head>
-<body>
-    <h1>COMMITTED CONDITIONING HOME PAGE</h1>
-</body>
-</html>
+{% extends "c2_main_app/base.html" %}
+{% load static %}
+
+{% block content %}
+    
+    {% if messages %}
+        {% for msg in messages %}
+            <div id="success-msg">
+                <p>{{ msg.message }}</p>
+                <i id="close" class="fas fa-times"></i>
+            </div>
+        {% endfor %}
+    {% endif %}
+    
+    <!-- <section class="landing">
+        <img src="{% static 'c2_main_app/images/main_landing_img.jpg' %}" alt="">
+        <h2>Personal Training In The South West</h2>
+        <button>Class Bookings</button>
+    </section>
+
+    <section class="about">
+        
+    </section> -->
+    
+
+    {% endblock content %}
