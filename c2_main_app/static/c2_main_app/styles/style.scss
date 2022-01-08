@@ -10,7 +10,6 @@
 *****************   LANDING SPLASH   *****************
 *****************************************************/
 
-$alignToNavText: calc(4rem + 80px);
 
 #landing-splash {
     background-image: url(images/main_landing_bwimg.jpg);
@@ -27,7 +26,6 @@ $alignToNavText: calc(4rem + 80px);
         @include flexCenter(column);
         justify-content: flex-start;
         align-items: flex-start;
-        padding-left: $alignToNavText;
     }
 
     h2 {
@@ -44,4 +42,3 @@ $alignToNavText: calc(4rem + 80px);
         margin-top: 12vh;
     }
 }
-

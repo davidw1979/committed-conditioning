@@ -67,3 +67,25 @@ $strapFontSize: calc(10px + 0.6vw);
         }
     }
 }
+
+#landing-splash .filter {
+    padding-left: calc(4rem + 80px);
+}
+
+@media screen and (max-width: 1050px) {
+    .nav-logo {
+        display: none;
+    }
+
+    #landing-splash .filter {
+        padding-left: $edgeMargin;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    #nav-bar .social {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 750px) {}
