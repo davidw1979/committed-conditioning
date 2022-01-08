@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Training | Fitness Classes | Committed Conditioning</title>
     <link rel="stylesheet" href="{% static 'c2_main_app/styles/style.min.css' %}">
+    <link rel="icon" href="{% static 'c2_main_app/styles/images/c2-favicon.ico' %}">
 
     <!--Import FontAwesome icons-->
     <script src="https://kit.fontawesome.com/27726bfc44.js" crossorigin="anonymous"></script>
@@ -15,10 +16,12 @@
 
     <nav id="nav-bar" class="nav-bg">
 
-            <div class="branding">
-                <h1>COMMITTED CONDITIONING</h1>
-                <p>Embrace Change It Will Come</p>
-            </div>
+        <img class="nav-logo" src="{% static 'c2_main_app/styles/images/logoWhite.png' %}" alt="">
+
+        <div class="branding">
+            <h1>COMMITTED CONDITIONING</h1>
+            <p>Embrace Change It Will Come</p>
+        </div>
                 
         <div class="nav-links">
             <div onclick="goTo('#tbc')" class="nav-link">Link 1</div>

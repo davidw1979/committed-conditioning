@@ -2,104 +2,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 @import "./setup";
+@import "./components";
+@import "./nav";
 
-/****************************
-******  NAVIGATION BAR ******
-****************************/
-
-$h1baseFontSize: calc(22px + 0.6vw);
-$strapFontSize: calc(10px + 0.6vw);
-
-#nav-bar {
-    position: fixed;
-    z-index: 2;
-    height: 110px;
-    width: 100vw;
-    background-color: $offBlack;
-    padding: 0 3rem;
-    max-width: 1600px;
-    color: white;
-    @include flexCenter(row);
-    justify-content: flex-start;
-
-    .branding {
-        width: fit-content;
-        display: flex;
-        flex-direction: column;
-
-        h1 {
-            font-weight: 600;
-            font-size: clamp(24px, $h1baseFontSize, 36px);
-            width: 12ch;
-            line-height: 0.9em;
-            margin-bottom: 0.3rem;
-        }
-    
-        p {
-            color: $teal;
-            font-size: clamp(12px, $strapFontSize, 14px);
-            font-weight: 300;
-        }
-    }
-
-    .nav-links {
-        font-weight: 300;
-        flex: 1;
-        @include flexCenter(row);
-        justify-content: flex-end;
-        gap: 4rem;
-    }
-
-    .social {
-        @include flexCenter(row);
-        gap: 32px;
-        margin-left: 4rem;
-        height: 100px;
-
-        a {
-            font-size: 2rem;
-            text-decoration: none;
-            @include flexCenter(row);
-            justify-content: flex-end;
-            color: white;
-        }
-    }
-}
 
 /*****************************************************
 *****************   LANDING SPLASH   *****************
 *****************************************************/
 
+$alignToNavText: calc(4rem + 80px);
+
 #landing-splash {
-    @include flexCenter(column);
     background-image: url(images/main_landing_bwimg.jpg);
     height: 100vh;
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+
+    .filter {
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(180deg, rgba(58, 58, 58, 0.67) 46.72%, rgba(58, 58, 58, 0) 100%);
+        @include flexCenter(column);
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-left: $alignToNavText;
+    }
+
+    h2 {
+        margin-top: calc(100px + 10vh);
+        width: 8ch;
+        font-family: $bodyFont;
+        color: white;
+        font-size: clamp(2.7rem, 6vw, 6rem);
+        font-weight: $medium;
+        line-height: 100%;
+    }
+
+    .btn {
+        margin-top: 12vh;
+    }
 }
 
-.filter {
-    height: 100%;
-    width: 100%;
-    background: linear-gradient(180deg, rgba(58, 58, 58, 0.67) 46.72%, rgba(58, 58, 58, 0) 100%);
-}
-
-.sect-titles {
-    height: 100%;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-h2 {
-    margin: 25vh 0 0 3rem;
-    width: 8ch;
-    font-family: $bodyFont;
-    color: white;
-    font-size: clamp(2.7rem, 6vw, 6rem);
-    font-weight: 500;
-    line-height: 100%;
-}
