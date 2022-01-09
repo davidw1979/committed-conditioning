@@ -3,26 +3,22 @@ const sidebar = document.querySelector('.nav-links');
 const navLinks = document.querySelectorAll('.nav-link');
 
 console.log(burger);
+console.log(sidebar);
 
 /***************************************************
 **************  NAVIGATION & SIDEBAR  **************
 ***************************************************/
 
-// Prevent sidebar triggering on window resizes
-let resizeTimer;
-window.addEventListener('resize', () => {
-    document.body.classList.add('resize-animation-stopper');
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(() => {
-        document.body.classList.remove('resize-animation-stopper');
-    }, 400);
-});
-
 // Trigger sidebar for mobile from burger icon
 burger.addEventListener('click', () => {
 
+    console.log('clicked')
+
     // Bring in sidebar
-    sidebar.classList.toggle('sidebar-active');
+    sidebar.classList.toggle('open');
+    navLinks.forEach(link => {
+        link.classList.toggle('fade');
+    });
 
     // Trigger burger animation
     burger.classList.toggle('burger-state');
