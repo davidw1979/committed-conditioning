@@ -1,9 +1,14 @@
 const burger = document.querySelector('.burger');
 const sidebar = document.querySelector('.nav-links');
 const navLinks = document.querySelectorAll('.nav-link');
+const socialIcons = document.querySelector('.social');
 
 console.log(burger);
 console.log(sidebar);
+
+
+
+
 
 /***************************************************
 **************  NAVIGATION & SIDEBAR  **************
@@ -12,7 +17,15 @@ console.log(sidebar);
 // Trigger sidebar for mobile from burger icon
 burger.addEventListener('click', () => {
 
-    console.log('clicked')
+    if (socialIcons.style.display === 'none') {
+        socialIcons.style.display = 'display';
+    }
+    else {
+        socialIcons.style.display = 'flex';
+    }
+
+    console.log(socialIcons);
+
 
     // Bring in sidebar
     sidebar.classList.toggle('open');
