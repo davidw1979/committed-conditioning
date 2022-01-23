@@ -2,8 +2,8 @@
 ******  NAVIGATION BAR ******
 ****************************/
 
-$h1FontSize: calc(22px + 0.6vw);
-$strapFontSize: calc(10px + 0.6vw);
+$h1FontSize: calc(2.2rem + 0.6vw);
+$strapFontSize: calc(1rem + 0.6vw);
 
 #nav-bar {
     position: fixed;
@@ -23,15 +23,15 @@ $strapFontSize: calc(10px + 0.6vw);
 
     .branding {
         width: fit-content;
+        height: fit-content;
         display: flex;
         flex-direction: column;
-        gap: 0.3rem;
         margin-left: 1rem;
         
 
         h1 {
             font-weight: $semiBold;
-            font-size: clamp(24px, $h1FontSize, 36px);
+            font-size: clamp(2.4rem, $h1FontSize, 3.6rem);
             width: 12ch;
             line-height: 0.9em;
         }
@@ -50,6 +50,9 @@ $strapFontSize: calc(10px + 0.6vw);
         @include flexCenter(row);
         justify-content: space-around;
         list-style: none;
+
+        li {
+            font-size: 1.3rem        }
     }
 
     .social {
@@ -58,7 +61,7 @@ $strapFontSize: calc(10px + 0.6vw);
         height: 100px;
 
         a {
-            font-size: 2rem;
+            font-size: 3.2rem;
             text-decoration: none;
             @include flexCenter(row);
             justify-content: flex-end;
@@ -79,7 +82,7 @@ $strapFontSize: calc(10px + 0.6vw);
 }
 
 #landing-splash .filter {
-    padding-left: calc(4rem + 80px);
+    padding-left: calc(#{$edgeMargin} + 80px + 1rem);
 }
 
 
@@ -141,7 +144,7 @@ $strapFontSize: calc(10px + 0.6vw);
             pointer-events: none;
             
             .nav-link {
-                font-size: 1.5rem;
+                font-size: 1.6rem;
                 opacity: 0;
 
                 &:nth-child(1) {

@@ -16,10 +16,9 @@ $bold: 700;
 $extraBold: 800;
 $heavy: 900;
 
-$baseFontSize: calc(14px + 0.4vw);
-$h1baseFontSize: calc(26px + 0.5vw);
+$baseFontSize: 62.5%;
 
-$edgeMargin: 3rem;
+$edgeMargin: 4.8rem;
 
 @mixin flexCenter ($direction) {
     display: flex;
@@ -36,9 +35,8 @@ $edgeMargin: 3rem;
 
 html {   
     font-family: $bodyFont;
-    font-size: clamp(16px, $baseFontSize, 18px);
     color: $offBlack;
-    
+    font-size: $baseFontSize;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -49,10 +47,3 @@ h1, h2, h3, h4, h5, h6 {
 body {
     position: relative;
 }
-
-// .container {
-//     max-width: 1100px;
-//     padding: 0 30px;
-//     margin: 0 auto;
-//     overflow: auto;
-// }
