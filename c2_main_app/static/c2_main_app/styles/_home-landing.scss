@@ -1,6 +1,6 @@
 #landing-splash {
     background-image: url(images/main_landing_bwimg.jpg);
-    height: 100vh;
+    height: calc(max(100vh, 600px));
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -16,7 +16,7 @@
 
         .landing-container {
             height: fit-content;
-            margin: auto 0;
+            margin: auto calc(var(--edge-margin--) * var(--edge-margin-multiplyer--) + var(--logo-size--));
 
             h2 {
                 padding-top: 100px;
@@ -25,7 +25,7 @@
                 color: white;
                 font-size: clamp(4rem, 7vw, 7rem);
                 font-weight: $medium;
-                line-height: 100%;
+                line-height: 120%;
             }
         
             .btn {
@@ -34,4 +34,3 @@
         }
     }
 }
-

@@ -3,188 +3,121 @@
 ****************************/
 
 $h1FontSize: calc(2.2rem + 0.6vw);
-$strapFontSize: calc(1rem + 0.6vw);
+$strapFontSize: calc(1rem + 0.3vw);
 
 #nav-bar {
     position: fixed;
+    padding: calc(2.4rem * var(--edge-margin-multiplyer--));
     z-index: 3;
     height: 110px;
     width: 100vw;
     background-color: $offBlack;
-    max-width: 1600px;
+    max-width: var(--large-screen--);
     color: white;
     @include flexCenter(row);
-    justify-content: flex-start;
+    justify-content: flex-start;    
+}
 
-    .nav-logo {
-        margin-left: $edgeMargin;
-        width: 80px;
+.nav-logo {
+    width: var(--logo-size--);
+}
+
+.branding {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+
+    h1 {
+        font-family: $headFont;
+        font-weight: $semiBold;
+        font-size: clamp(2.4rem, $h1FontSize, 3.6rem);
+        width: 12ch;
+        line-height: 0.9em;
     }
 
-    .branding {
-        width: fit-content;
-        height: fit-content;
-        display: flex;
-        flex-direction: column;
-        margin-left: 1rem;
-        
-
-        h1 {
-            font-weight: $semiBold;
-            font-size: clamp(2.4rem, $h1FontSize, 3.6rem);
-            width: 12ch;
-            line-height: 0.9em;
-        }
-    
-        p {
-            color: $teal;
-            font-size: clamp(12px, $strapFontSize, 14px);
-            font-weight: $light;
-            
-        }
-    }
-
-    .nav-links {
+    p {
+        color: $teal;
+        font-size: clamp(10px, $strapFontSize, 14px);
         font-weight: $light;
-        flex: 1;
-        @include flexCenter(row);
-        justify-content: space-around;
-        list-style: none;
-
-        li {
-            font-size: 1.3rem        }
-    }
-
-    .social {
-        @include flexCenter(row);
-        gap: 32px;
-        height: 100px;
-
-        a {
-            font-size: 3.2rem;
-            text-decoration: none;
-            @include flexCenter(row);
-            justify-content: flex-end;
-            color: white;
-        }
-    }
-
-    .burger {
-        display: none;
-
-        .line {
-            width: 40px;
-            height: 3px;
-            background-color: white;
-            margin: 6px 0;
-        }
+        
     }
 }
 
-#landing-splash .filter {
-    padding-left: calc(#{$edgeMargin} + 80px + 1rem);
-}
-
-
-/**************** NAV BAR REMOVE ICONS DOWN TO MOBILE **************/
-
-
-@media screen and (max-width: 1050px) {
-    #nav-bar {
-
-        .nav-logo {
-            display: none;
-        }
+.nav-links {
+    position: fixed;
+    top: 110px;
+    left: 0px;
+    background-color:$offBlack;
+    opacity: 1;
+    @include flexCenter(column);
+    align-items: center;    
+    justify-content: space-around;  
+    width: 100%;
+    height: calc(100vh - 110px);
+    clip-path: circle(100px at 125% -25%);
+    -webkit-clip-path: circle(100px at 125% -25%);
+    transition: all 0.5s ease;
+    pointer-events: none;
     
-        .branding {
-            margin-left: $edgeMargin;
+    .nav-link {
+        font-size: 1.8rem;
+        opacity: 0;
+        list-style-type: none;
+
+        &:nth-child(1) {
+            transition: all 0.5s ease 0.05s;
+        }
+
+        &:nth-child(2) {
+            transition: all 0.5s ease 0.125s;
+        }
+
+        &:nth-child(3) {
+            transition: all 0.5s ease 0.2s;
+        }
+
+        &:nth-child(4) {
+            transition: all 0.5s ease 0.275s;
         }
     }
 
-    #landing-splash .filter {
-        padding-left: $edgeMargin;
+    .fade {
+        opacity: 1;
     }
 }
 
-@media screen and (max-width: 850px) {
-    #nav-bar .social {
-        display: none;
+.open {
+    clip-path: circle(1400px at 100% 0%);
+    -webkit-clip-path: circle(1400px at 100% 0%);
+    pointer-events: all;
+}
+
+.social {
+    @include flexCenter(row);
+    gap: 32px;
+    height: 100px;
+    display: none;
+
+    a {
+        font-size: 3.2rem;
+        text-decoration: none;
+        @include flexCenter(row);
+        justify-content: flex-end;
+        color: white;
     }
 }
 
+.burger {
+    flex: 1;
+    @include flexCenter(column);
+    align-items: flex-end;
 
-/*************************************************
-***************** FORMAT FOR MOBILE **************
-*************************************************/
-
-
-@media screen and (max-width: 750px) {
-    #nav-bar {
-
-        .burger {
-            flex: 1;
-            margin: 30px $edgeMargin;;
-            @include flexCenter(column);
-            align-items: flex-end;
-        }
-
-        .nav-links {
-            position: fixed;
-            top: 110px;
-            background-color:$offBlack;
-            opacity: 0.90;
-            @include flexCenter(column);
-            align-items: center;    
-            justify-content: space-around;        
-            width: 100%;
-            height: calc(100vh - 110px);
-            clip-path: circle(100px at 100% 1%);
-            -webkit-clip-path: circle(100px at 125% -25%);
-            transition: all 0.5s ease-out;
-            pointer-events: none;
-            
-            .nav-link {
-                font-size: 1.6rem;
-                opacity: 0;
-
-                &:nth-child(1) {
-                    transition: all 0.5s ease 0.05s;
-                }
-
-                &:nth-child(2) {
-                    transition: all 0.5s ease 0.125s;
-                }
-
-                &:nth-child(3) {
-                    transition: all 0.5s ease 0.2s;
-                }
-
-                &:nth-child(4) {
-                    transition: all 0.5s ease 0.275s;
-                }
-            }
-
-            .fade {
-                opacity: 1;
-            }
-        }
-
-        .open {
-            clip-path: circle(1400px at 100% 0%);
-            -webkit-clip-path: circle(1400px at 100% 0%);
-            pointer-events: all;
-        }
+    .line {
+        width: 40px;
+        height: 3px;
+        background-color: white;
+        margin: 6px 0;
     }
 }
-
-/*.burger-state .line1 {
-    transform: rotate(-45deg) translate(-10px, 10px);
-}
-
-.burger-state .line2 {
-    opacity: 0;
-}
-
-.burger-state .line3 {
-    transform: rotate(45deg) translate(-5px, -6px);
-}*/

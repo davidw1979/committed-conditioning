@@ -27,57 +27,110 @@
                 <h3>GET TO KNOW US</h3>
             </header>
 
-            <article>
-                <div class="info-card-narrative">
+            <article class="gtk-container page-margins">
+                <div class="article-narrative">
                     <h4>EMBRACE CHANGE</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ante fringilla imperdiet massa quis. Nam sem ut tempor justo, varius quam urna, volutpat. Cras cras aliquet mauris ornare nam. Leo, ullamcorper pellentesque in leo enim. Placerat quis cursus nibh id mauris, ut. Blandit ac lacus, elementum neque. Habitant ornare et, molestie vulputate ut feugiat nisl. Malesuada turpis imperdiet eget quis. Eu sed vitae penatibus quam ullamcorper eget nunc. Condimentum bibendum dignissim imperdiet quisque.</p>
                 </div>
-                <div class="info-card">
+                <div class="info-card card-1 shadow">
                     <h4>COMMITTED CONDITIONING</h4>
                     <div class="image-container">
                         <img src="{% static 'c2_main_app/styles/images/logoBlack.png' %}" alt="">
                     </div>
-                    <ul>
-                        <li>Premium Personal Training Service</li>
-                        <li>Tailored Fitness Programmes & Classes</li>
-                        <li>South West & Online Client Base</li>
+                    <ul class="fa-ul">
+                        <li><span class="fa-li"><i class="fas fa-check-circle"></i></span>Premium Personal Training Service</li>
+                        <li><span class="fa-li"><i class="fas fa-check-circle"></i></span>Tailored Fitness Programmes & Classes</li>
+                        <li><span class="fa-li"><i class="fas fa-check-circle"></i></span>South West & Online Client Base</li>
                     </ul>
                 </div>
             </article>
             
-            <article>
-                <div class="info-card-narrative">
+            <article class="gtk-container page-margins">
+                <div class="article-narrative">
                     <h4>OUR PHILOSOPHY</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ante fringilla imperdiet massa quis. Nam sem ut tempor justo, varius quam urna, volutpat. Cras cras aliquet mauris ornare nam. Leo, ullamcorper pellentesque in leo enim. Placerat quis cursus nibh id mauris, ut. Blandit ac lacus, elementum neque. Habitant ornare et, molestie vulputate ut feugiat nisl. Malesuada turpis imperdiet eget quis. Eu sed vitae penatibus quam ullamcorper eget nunc. landit ac lacus, elementum neque. Habitant ornare et, molestie vulputate ut feugiat nisl. Malesuada turpis imperdiet.</p>
+                    <p>Hi I'm Rob Dixon a Personal Trainer working in the Cullompton / Exeter area. I've been in the fitness industry for nearly 5 years and have vast experience in Strength and Conditioning, Nutrition and weight loss management. I thrive on helping people from all walks of life achieve their goals be that psychically, aesthetically and of course mentally. I truly believe everyone has the capacity to become a healthier "fitter "version of themselves and its my passion and job to give you the guidance , support and motivation needed to succeed</p>
                 </div>
-                <div class="info-card">
+                <div class="info-card card-2 shadow">
                     <h4>HEAD COACH - ROB DIXON</h4>
-                    <p>An ex-Royal Marines Commando, Rob has a track record of inspiring clients to reach thier goals. He is a registered member of the Chartered Insitute for the Management of Sport & Physical Activity.</p>
-                    <div class="CIMSPA">
-                        <img src="{% static 'c2_main_app/styles/images/facebook-icon.png' %}" alt="">
-                        <img src="{% static 'c2_main_app/styles/images/cimspa.png' %}" alt="">
-                        <img src="{% static 'c2_main_app/styles/images/insta-logo.png' %}" alt="">
-                    </div>
-                    <div class="rob">
+                    <div class="image-container rob">
                         <img src="{% static 'c2_main_app/styles/images/rob_dixon.png' %}" alt="">
+                    </div>
+                    <div class="info-card-narrative">
+                        <p>A professional and passionate Level 4 qualified coach delivering personalised fitness solutions to sustain individuals long term health benefits.</p>
+                        <div class="cimspa">
+                            <a href="https://hi-in.facebook.com/committed.conditioning" target="_blank"><i class="fb-blue fab fa-facebook grow"></i></a>
+                            <img class="cimspa-icon" src="{% static 'c2_main_app/styles/images/cimspa.png' %}" alt="">
+                            <a href="https://www.instagram.com/committed_conditioning" target="_blank"><i class="fab fa-instagram grow"></i></a>
+                        </div>
                     </div>
                 </div>
             </article>
-
         </section>
-    </main>
 
-    
-    
-    <!-- <section class="landing">
-        <img src="{% static 'c2_main_app/images/main_landing_img.jpg' %}" alt="">
-        <h2>Personal Training In The South West</h2>
-        <button>Class Bookings</button>
-    </section>
+        </section id="products">
+            <header class="sect-header">
+                <h3>GET FIT</h3>
+            </header>
+            <div class="media-scroller snaps-inline">
+                <div class="media-element shadow">
+                    <img src="{% static 'c2_main_app/styles/images/class.jpg' %}" alt="">
+                    <h4>Group Training</h4>
+                    <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Amet minim mollit non deserunt ullamco est sit.</p>
+                    <button>Enquiry</button>
+                </div>
+                <div class="media-element shadow">
+                    <img src="{% static 'c2_main_app/styles/images/personal_training.jpg' %}" alt="">
+                    <h4>Personal Training</h4>
+                    <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Amet minim mollit non deserunt ullamco est sit.</p>
+                    <button>Enquiry</button>
+                </div>
+                <div class="media-element shadow">
+                    <img src="{% static 'c2_main_app/styles/images/personal_training.jpg' %}" alt="">
+                    <h4>Weight Management</h4>
+                    <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Amet minim mollit non deserunt ullamco est sit.</p>
+                    <button>Enquiry</button>
+                </div>
+                <div class="media-element shadow">
+                    <img src="{% static 'c2_main_app/styles/images/personal_training.jpg' %}" alt="">
+                    <h4>Body Transformation</h4>
+                    <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Amet minim mollit non deserunt ullamco est sit.</p>
+                    <button>Enquiry</button>
+                </div>
+            </div>
+        <section>
 
-    <section class="about">
+        <section id="contact">
+            <header class="sect-header">
+                <h3 class="shrink-header-margin">GET IN TOUCH</h3>
+            </header>
+            <!--<div class="contact-container page-margins">
+                <div class="contact-info">
+                    <p>Do you feel ready to embrace change or simply kick off a conversation before committing?</p>
+                    <p>Please get in touch with Committed Conditioning using this form.</p>
+                    <p>Alternativley contact Head Coach Rob Dixon directly via one of the following.</p>
+                    <a href="tel:07885734528"><i class="contact-icon fas fa-phone"></i> 07885 734 528</a><br>
+                    <a href="mailto:david_weatherspoon@hotmail.com?subject=Committed Conditioning Enquiry"><i class="contact-icon fas fa-envelope"></i>info@committedconditioning.co.uk</a>
+                    <img src="{% static 'c2_main_app/styles/images/kettlebells.png' %}" alt="">
+                </div>
+    
+                <div class="contact-form-container">
+                    <form method="POST" action="" id="new_input_form" class="shadow">{% csrf_token %}
+                        <label for="firstname">First Name</label><br>
+                        <input type="text" id="firstname_input" class="input_field" name="firstname" autocomplete="off"><br>
+                        <label for="surname">Surname</label><br>
+                        <input type="text" id="surname_input" class="input_field" name="surname" autocomplete="off"><br>
+                        <label for="email">Email</label><br>
+                        <input type="text" id="email_input" class="input_field" name="email" autocomplete="off"><br>
+                        <label for="message">Message</label><br>
+                        <textarea name="message" id="message_input" class="input_field" cols="30" rows="12" autocomplete="off"></textarea><br>
+                        <input type="submit" id="submit" class="btn shadow" value="Submit" disabled>
+                    </form>
+                </div>
+
+            </div>-->
+            
+        </section>
         
-    </section> -->
-    
+    </main>
 
     {% endblock content %}
