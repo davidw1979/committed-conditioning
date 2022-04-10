@@ -87,6 +87,7 @@
 
             p {
                 font-size: clamp(1.1rem, calc(1rem + 0.2vw), 1.8rem);
+                font-weight: $regular;
                 line-height: 2.4rem;
                 text-align: center;
                 height: fit-content;

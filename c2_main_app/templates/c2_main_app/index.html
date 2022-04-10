@@ -103,7 +103,7 @@
             <header class="sect-header">
                 <h3 class="shrink-header-margin">GET IN TOUCH</h3>
             </header>
-            <!--<div class="contact-container page-margins">
+            <div class="contact-container page-margins">
                 <div class="contact-info">
                     <p>Do you feel ready to embrace change or simply kick off a conversation before committing?</p>
                     <p>Please get in touch with Committed Conditioning using this form.</p>
@@ -114,7 +114,7 @@
                 </div>
     
                 <div class="contact-form-container">
-                    <form method="POST" action="" id="new_input_form" class="shadow">{% csrf_token %}
+                    <form method="POST" action="" id="new_input_form">{% csrf_token %}
                         <label for="firstname">First Name</label><br>
                         <input type="text" id="firstname_input" class="input_field" name="firstname" autocomplete="off"><br>
                         <label for="surname">Surname</label><br>
@@ -122,12 +122,12 @@
                         <label for="email">Email</label><br>
                         <input type="text" id="email_input" class="input_field" name="email" autocomplete="off"><br>
                         <label for="message">Message</label><br>
-                        <textarea name="message" id="message_input" class="input_field" cols="30" rows="12" autocomplete="off"></textarea><br>
+                        <textarea name="message" id="message_input" class="input_field" cols="30" rows="6" autocomplete="off"></textarea><br>
                         <input type="submit" id="submit" class="btn shadow" value="Submit" disabled>
                     </form>
                 </div>
 
-            </div>-->
+            </div>
             
         </section>
         
