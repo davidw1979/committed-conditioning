@@ -33,6 +33,62 @@
     }
 }
 
+@media only screen and (min-width: 901px) {
+    #contact {
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: calc(var(--edge-margin--) * var(--edge-margin-multiplyer--));   
+            justify-content: left; 
+
+            .contact-info {
+                @include flexCenter(column);
+                align-items: baseline;
+                justify-content: space-between;
+            }
+    
+            p {
+                font-size: clamp(1.6rem, calc(1.4rem + 8.333vw), 1.8rem);
+                line-height: 3.2rem;
+                margin-bottom: 2rem;
+    
+                &:last-of-type {
+                    margin-top: 3.2rem;
+                }
+            }
+    
+            a {
+                text-decoration: none;
+                color: #7c8eb2;
+                font-size: clamp(1.6rem, calc(1.4rem + 8.333vw), 1.8rem);
+    
+                .contact-icon {
+                    color: $priColour;
+                    font-size: 3rem;
+                    margin: 2rem 2rem 2rem 0;
+                }
+            }
+
+            img {
+                margin-bottom: 0;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            form {
+                padding: 48px;
+                min-width: 280px;
+                max-width: 500px;
+                box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+                        
+                #submit {
+                    margin-bottom: 27px;
+                }
+            }
+        }
+    }
+}
+
 @media only screen and (min-width: 901px) and (max-width: 1150px) {
     :root {
         --product-cols--: 35%;
@@ -45,23 +101,13 @@
     }
 }
 
-@media only screen and (min-width: 1351px) and (max-width: 1550px) {
+@media only screen and (min-width: 1351px) {
     :root {
         --product-cols--: 20%;
     }
 
     .media-scroller {
         margin: 0 calc(var(--edge-margin--) * var(--edge-margin-multiplyer--));
-    }
-}
-
-@media only screen and (min-width: 1551px) {
-    :root {
-        --product-cols--: 20%;
-    }
-    
-    .media-scroller {
-        margin: 0 calc(var(--edge-margin--) * var(--edge-margin-multiplyer--) + var(--logo-size--));
     }
 }
 
@@ -172,6 +218,18 @@
     }
 
     .page-margins {
+        padding: 0 calc(var(--edge-margin--) * var(--edge-margin-multiplyer--) + var(--logo-size--));
+    }
+
+    #contact > .page-margins {
+        padding: 0 calc(var(--edge-margin--) * var(--edge-margin-multiplyer--));
+    }
+}
+
+/*  Align & neaten contact section padding  */
+@media screen and (min-width: 1300px) {
+    
+    #contact > .page-margins {
         padding: 0 calc(var(--edge-margin--) * var(--edge-margin-multiplyer--) + var(--logo-size--));
     }
 }

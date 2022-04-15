@@ -1,3 +1,29 @@
+#success-msg {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-column-gap: 36px;
+    justify-items: center;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+    margin-top: 110px;
+    width: 100vw;
+    background-color: seagreen;
+    color: white;
+    font-size: 16px;
+    font-weight: 300;
+    padding: 9px 16px;
+
+    p {
+        grid-column: 2 / span 1;
+    }
+
+    i {
+        grid-column: 3 / span 1;
+    }
+}
+
 .btn {
     padding: 1rem 3rem; 
     background-color: $priColour;
@@ -12,11 +38,12 @@
 form {
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     width: 100%;
 
     label {
         font-size: 16px;
-        font-weight: $light;
+        font-weight: $regular;
         color: $offBlack;
         position: relative;
         top: 27px;
@@ -32,15 +59,21 @@ form {
         font-size: 16px;
         padding: 12px 16px;
         margin-top: 2rem;
+        font-family: $bodyFont;
     }
 
     #message_input {
         border-bottom: none;
         margin-bottom: 3.2rem;
+        padding: 12px 16px;
     }
 
     .input_field:focus {
         outline: 2px solid $priColour;
         outline-offset: -2px;
+    }
+
+    #submit {
+        opacity: 0.5;
     }
 }

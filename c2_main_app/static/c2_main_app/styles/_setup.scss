@@ -1,7 +1,7 @@
 /*********   CSS Custom Properties   ********/
 
 :root {
-   
+   --pri--: rgba(110, 166, 162, 1);
 }
 
 /************   SASS Variables   ****************/
@@ -47,6 +47,7 @@ html {
     color: $offBlack;
     font-size: $baseFontSize;
     background-color: white;
+    scroll-behavior: smooth;
 }
 
 
@@ -66,15 +67,12 @@ p {
     font-weight: $light;
 }
 
-.shrink-header-margin {
-    margin-top: 3.2rem;
-    margin-bottom: 4.8rem;
-}
-
 body {
     position: relative;
     max-width: var(--large-screen--);
     margin: 0 auto;
+    background-color: $offWhite;
+    overscroll-behavior: none;
 
     main {
         background-color: $offWhite;
@@ -89,3 +87,19 @@ body {
     padding: 0 calc(var(--edge-margin--) * var(--edge-margin-multiplyer--));
 }
 
+.fade-out {
+    animation: fadeOut 1s ease 0s 1 forwards;
+    -webkit-animation: fadeOut 1s ease 0s 1 forwards;
+    -moz-animation: fadeOut 1s ease 0s 1 forwards;
+    -ms-animation: fadeOut 1s ease 0s 1 forwards;
+}
+
+@-webkit-keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
