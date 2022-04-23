@@ -7,4 +7,5 @@ app_name = 'c2_main_app'
 urlpatterns = [
     #Home page
     path('', views.index, name='index'),
+    path('consultation', views.consultation, name='consultation'),
 ]

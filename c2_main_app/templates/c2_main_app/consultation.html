@@ -1,0 +1,63 @@
+{% extends "c2_main_app/base.html" %}
+{% load static %}
+
+{% block stylesheets  %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'c2_main_app/styles/consultation-style.min.css' %}">
+{% endblock %}
+
+{% block content %}
+    
+    {% if messages %}
+        {% for msg in messages %}
+            <div id="success-msg">
+                <p>{{ msg.message }}</p>
+                <i id="close" class="fas fa-times"></i>
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    <main>
+        <h1>Current Consultations:</h1> <br>
+        <div class="accordian">
+            <div class="accordian-item shadow">
+                <div class="accordian-item-header">This Weeks Appointments</div>
+                <div class="accordian-item-body">
+                    <ul class="accordian-item-body-content">
+                        {% for appt in this_weeks_appts %}
+                            <li>{{ appt.formatted_date }}</li>
+                        {% empty %}
+                            <li>No appointments currently available</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <div class="accordian-item shadow">
+                <div class="accordian-item-header">Next Weeks Appointments</div>
+                <div class="accordian-item-body">
+                    <ul class="accordian-item-body-content">
+                        {% for appt in next_weeks_appts %}
+                            <li>{{ appt.formatted_date }}</li>
+                        {% empty %}
+                            <li>No appointments currently available</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <div class="accordian-item shadow">
+                <div class="accordian-item-header">Other Appointments</div>
+                <div class="accordian-item-body">
+                    <ul class="accordian-item-body-content">
+                        {% for appt in next_four_weeks_appts %}
+                            <li>{{ appt.formatted_date }}</li>
+                        {% empty %}
+                            <li>No appointments currently available</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+{% endblock content %}

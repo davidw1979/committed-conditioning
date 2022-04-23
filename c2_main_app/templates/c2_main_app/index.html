@@ -1,6 +1,12 @@
 {% extends "c2_main_app/base.html" %}
 {% load static %}
 
+{% block stylesheets  %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'c2_main_app/styles/home-style.min.css' %}">
+    <link rel="icon" href="{% static 'c2_main_app/styles/images/c2-favicon.ico' %}">
+{% endblock %}
+
 {% block content %}
     
     {% if messages %}

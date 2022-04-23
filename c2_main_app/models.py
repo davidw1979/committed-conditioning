@@ -1,4 +1,5 @@
 from django.db import models
+import calendar
 
 # Create your models here.
 
@@ -10,3 +11,9 @@ class Lead(models.Model):
 
     def __str__(self):
         return self.last
+
+class Consultation_appt(models.Model):
+    appt_datetime = models.DateTimeField(unique=True)
+
+    def __str__(self):
+        return str(self.appt_datetime.date())
