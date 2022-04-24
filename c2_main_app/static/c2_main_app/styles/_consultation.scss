@@ -15,10 +15,11 @@ main {
 
         .accordian-item-header {
             padding: 0.5rem 3rem 0.5rem 1rem;
-            min-height: 3.5rem;
+            min-height: 5.4rem;
             line-height: 1.25rem;
             font-family: $headFont;
             font-weight: $semiBold;
+            font-size: 1.6rem;
             display: flex;
             align-items: center;
             position: relative;
@@ -46,17 +47,62 @@ main {
             transition: max-height 0.1s linear;
 
             .accordian-item-body-content {
-            padding: 1rem;
-            line-height: 1.5rem;
             border-top: 0.5px solid;
             border-image: linear-gradient(to right, $lightGray, transparent) 1;
             //border-image: linear-gradient(to right, $priColour, $teal) 1;
+
+            li {
+                border-bottom: 0.5px solid;
+                border-image: linear-gradient(to right, $lightGray, transparent) 1;
+                padding: 0.5rem 3rem 0.5rem 1rem;
+                min-height: 5.4rem;
+                line-height: 1.25rem;
+                font-family: $bodyFont;
+                font-weight: $regular;
+                font-size: 1.6rem;
+                display: flex;
+                align-items: center;
+                position: relative;
+                cursor: pointer;
+                }
             }
         }
     }
 }
 
+input[type="radio"] {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    appearance: none;
+    /* For iOS < 15 to remove gradient background */
+    background-color: #fff;
+    /* Not removed via appearance */
+    margin: 0;
+    font: inherit;
+    color: $priColour;
+    width: 2rem;
+    height: 2rem;
+    border: 0.15rem solid $priColour;
+    border-radius: 50%;
+    margin-right: 2rem;
+    display: grid;
+    place-content: center;
+}
 
+input[type="radio"]::before {
+    content: "";
+    width: 1.4rem;
+    height: 1.4rem;
+    background-color: $priColour;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    
+}
+
+input[type="radio"]:checked::before {
+    transform: scale(1);
+}
 
 
 

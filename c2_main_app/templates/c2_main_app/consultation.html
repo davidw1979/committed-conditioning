@@ -18,14 +18,17 @@
     {% endif %}
 
     <main>
-        <h1>Current Consultations:</h1> <br>
+        <h2>Current Consultations:</h2> <br>
         <div class="accordian">
             <div class="accordian-item shadow">
-                <div class="accordian-item-header">This Weeks Appointments</div>
+                <h3 class="accordian-item-header">This Weeks Appointments</h3>
                 <div class="accordian-item-body">
                     <ul class="accordian-item-body-content">
                         {% for appt in this_weeks_appts %}
-                            <li>{{ appt.formatted_date }}</li>
+                            <li>
+                                <input type="radio" id="{{ appt.appt_datetime }}" name="consultationSelection">
+                                <label for="{{ appt.appt_datetime }}">{{ appt.formatted_date }}</label>
+                            </li>
                         {% empty %}
                             <li>No appointments currently available</li>
                         {% endfor %}
@@ -33,11 +36,14 @@
                 </div>
             </div>
             <div class="accordian-item shadow">
-                <div class="accordian-item-header">Next Weeks Appointments</div>
+                <h3 class="accordian-item-header">Next Weeks Appointments</h3>
                 <div class="accordian-item-body">
                     <ul class="accordian-item-body-content">
                         {% for appt in next_weeks_appts %}
-                            <li>{{ appt.formatted_date }}</li>
+                            <li>
+                                <input type="radio" id="{{ appt.appt_datetime }}" name="consultationSelection">
+                                <label for="{{ appt.appt_datetime }}">{{ appt.formatted_date }}</label>
+                            </li>
                         {% empty %}
                             <li>No appointments currently available</li>
                         {% endfor %}
@@ -45,11 +51,14 @@
                 </div>
             </div>
             <div class="accordian-item shadow">
-                <div class="accordian-item-header">Other Appointments</div>
+                <h3 class="accordian-item-header">Other Appointments</h3>
                 <div class="accordian-item-body">
                     <ul class="accordian-item-body-content">
                         {% for appt in next_four_weeks_appts %}
-                            <li>{{ appt.formatted_date }}</li>
+                            <li>
+                                <input type="radio" id="{{ appt.appt_datetime }}" name="consultationSelection">
+                                <label for="{{ appt.appt_datetime }}">{{ appt.formatted_date }}</label>
+                            </li>
                         {% empty %}
                             <li>No appointments currently available</li>
                         {% endfor %}
