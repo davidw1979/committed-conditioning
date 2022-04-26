@@ -4,6 +4,7 @@ const navLinks = document.querySelectorAll('.nav-link');
 const socialIcons = document.querySelector('.social');
 const successMessage = document.getElementById('success-msg');
 
+
 // get form labels
 const formLabels = document.querySelectorAll('#new_input_form label');
 
@@ -160,6 +161,12 @@ accordianItemHeaders.forEach(accordianItemHeader => {
         } else {
         accordianItemBody.style.maxHeight = 0;
         }
+
+        const consultationAppts = event.target.nextElementSibling.querySelectorAll('li');
+
+        consultationAppts.forEach(appt => appt.addEventListener('click', e => {
+            appt.querySelector('input').checked = true;
+        })); 
     });
 });
     

@@ -25,7 +25,7 @@
                 <div class="accordian-item-body">
                     <ul class="accordian-item-body-content">
                         {% for appt in this_weeks_appts %}
-                            <li>
+                            <li class="appointment">
                                 <input type="radio" id="{{ appt.appt_datetime }}" name="consultationSelection">
                                 <label for="{{ appt.appt_datetime }}">{{ appt.formatted_date }}</label>
                             </li>
