@@ -162,8 +162,8 @@ accordianItemHeaders.forEach(accordianItemHeader => {
         accordianItemBody.style.maxHeight = 0;
         }
 
+        // Make whole li element clickable to check input checkbox
         const consultationAppts = event.target.nextElementSibling.querySelectorAll('li');
-
         consultationAppts.forEach(appt => appt.addEventListener('click', e => {
             appt.querySelector('input').checked = true;
         })); 

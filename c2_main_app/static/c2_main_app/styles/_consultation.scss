@@ -1,5 +1,54 @@
-main {
-    padding-top: 110px;
+
+
+#lead-in {
+    padding: 110px 0 4rem;
+
+    .consultation-splash {
+        background-image: url(images/main_landing_bwimg.jpg);
+        height: 30vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    
+        .filter {
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(180deg, rgba(58, 58, 58, 0.67) 46.72%, rgba(58, 58, 58, 0) 100%);
+            @include flexCenter(column);
+            justify-content: center;
+            align-items: center;
+    
+            h2 {
+                text-align: center;
+                width: 11ch;
+                font-family: $bodyFont;
+                color: white;
+                font-size: clamp(4rem, 7vw, 7rem);
+                font-weight: $medium;
+                line-height: 120%;
+            }
+        }
+    }
+
+    article {
+        margin: 0 calc(var(--edge-margin--) * var(--edge-margin-multiplyer--));
+        
+        h3 {
+            font-size: 3rem;
+            font-family: $bodyFont;
+            color: $priColour;
+            margin-top: 6rem;
+        }
+
+        p {
+            font-size: clamp(1.4rem, calc(1.4rem + 0.3vw), 1.8rem);
+            line-height: 3rem;
+
+            &:nth-of-type(2) {
+                margin: 2.4rem 0 0;
+            }
+        };
+    }
 }
 
 .accordian {
