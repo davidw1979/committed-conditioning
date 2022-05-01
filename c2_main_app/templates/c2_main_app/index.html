@@ -5,6 +5,8 @@
     {{ block.super }}
     <link rel="stylesheet" href="{% static 'c2_main_app/styles/home-style.min.css' %}">
     <link rel="icon" href="{% static 'c2_main_app/styles/images/c2-favicon.ico' %}">
+    <script src="{% static 'app-nav.js' %}" defer></script>
+    <script src="{% static 'app_index.js' %}" defer></script>
 {% endblock %}
 
 {% block content %}

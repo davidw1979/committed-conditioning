@@ -4,6 +4,8 @@
 {% block stylesheets  %}
     {{ block.super }}
     <link rel="stylesheet" href="{% static 'c2_main_app/styles/consultation-style.min.css' %}">
+    <script src="{% static 'app-nav.js' %}" defer></script>
+    <script src="{% static 'app_consultation.js' %}" defer></script>
 {% endblock %}
 
 {% block content %}
@@ -77,6 +79,26 @@
                     </ul>
                 </div>
             </div>
+        </div>
+
+        <div class="contact-form-container">
+            <form method="POST" action="" id="">{% csrf_token %}
+                <label for="firstname">First Name</label><br>
+                <input type="text" id="firstname_input" class="input_field" name="firstname" autocomplete="off"><br>
+                <label for="surname">Surname</label><br>
+                <input type="text" id="surname_input" class="input_field" name="surname" autocomplete="off"><br>
+                <label for="email">Email</label><br>
+                <input type="text" id="email_input" class="input_field" name="email" autocomplete="off"><br>
+                <label for="location">Location Preference</label><br>
+                <div class="radio_group">
+                    <input type="radio" id="loc_choice1" name="location">
+                    <label for="loc_choice1">Zoom</label>
+                    <input type="radio" id="loc_choice2" name="location">
+                    <label for="loc_choice2">Cullompton</label>
+                </div>
+                
+                <input type="submit" id="submit" class="btn shadow" value="Submit" disabled>
+            </form>
         </div>
 
     </main>
