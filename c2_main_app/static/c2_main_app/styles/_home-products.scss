@@ -45,6 +45,11 @@
             background-color: $priColour;
             color: white;
             margin: 0 auto 2rem;
+
+            &:hover {
+                background-color: $priDark;
+                cursor: pointer;
+            }
         }
     }
 }

@@ -8,6 +8,7 @@
 
 $offWhite: rgba(251, 251, 251, 1);
 $priColour: rgba(110, 166, 162, 1);
+$priDark: rgba(70, 138, 133, 1);
 $offBlack: rgba(61, 61, 61, 1);
 $teal: rgba(48, 214, 176, 1);
 $fbBlue: #3b5998;
@@ -74,7 +75,7 @@ body {
 }
 
 .shadow {
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 6px 0 rgba(32, 33, 36, 0.28);
 }
 
 .page-margins {
@@ -96,4 +97,9 @@ body {
 @keyframes fadeOut {
     0% { opacity: 1; }
     100% { opacity: 0; }
+}
+
+.hover-effect:hover {
+    color: $priColour;
+    cursor: pointer;
 }

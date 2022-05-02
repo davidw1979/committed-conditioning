@@ -65,11 +65,13 @@ function setButton() {
     });
     switch (fieldsFull === true) {
         case true:
+            submitBtn.classList.add("btn-enabled");
             submitBtn.disabled = false;
             submitBtn.style.opacity = '1'
             break;
         
         case false:
+            submitBtn.classList.remove("btn-enabled");
             submitBtn.disabled = true;
             submitBtn.style.opacity = '0.5'
             break;
