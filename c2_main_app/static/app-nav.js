@@ -34,8 +34,6 @@ burger.addEventListener('click', () => {
         socialIcons.style.display = 'flex';
     }
 
-    console.log(socialIcons);
-
     toggleSidebar();
 
     // Trigger burger animation
