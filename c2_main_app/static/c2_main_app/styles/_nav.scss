@@ -65,6 +65,11 @@ $strapFontSize: calc(1rem + 0.3vw);
         list-style-type: none;
         cursor: pointer;
 
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
         &:hover {
             color: $priColour;
         }
