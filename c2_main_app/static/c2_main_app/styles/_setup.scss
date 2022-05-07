@@ -49,6 +49,8 @@ html {
     color: $offBlack;
     font-size: $baseFontSize;
     background-color: white;
+    overflow-x: auto;
+    scroll-behavior: smooth;
 }
 
 
@@ -67,9 +69,6 @@ body {
     margin: 0 auto;
     background-color: $offWhite;
     overscroll-behavior: none;
-
-    overflow-x: auto;
-    scroll-behavior: smooth;
 
     main {
         background-color: $offWhite;
