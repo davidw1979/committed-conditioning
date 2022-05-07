@@ -6,7 +6,7 @@
     grid-auto-flow: column;
     grid-auto-columns: var(--product-cols--);
     padding: 0 0 5rem 0;
-    overflow-x: auto;
+    overflow-x: scroll;
     scroll-behavior: smooth;
     overscroll-behavior-inline: contain;
     margin-left: var(--edge-margin--);
