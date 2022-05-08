@@ -1,18 +1,17 @@
 .media-scroller {
-    position: relative;
     padding: 0 var(--edge-margin--);
     display: grid;
     gap: calc(max(5vw, 40px));
     grid-auto-flow: column;
     grid-auto-columns: var(--product-cols--);
     padding: 0 0 5rem 0;
-    overflow-x: scroll;
-    scroll-behavior: smooth;
+    overflow-x: auto;
     overscroll-behavior-inline: contain;
     margin-left: var(--edge-margin--);
 
     .media-element {
         width: clamp(200px, calc(180px + 15vw), 300px);
+    
         display: flex;
         flex-direction: column;
         border-radius: 10px;
@@ -46,11 +45,6 @@
             background-color: $priColour;
             color: white;
             margin: 0 auto 2rem;
-
-            &:hover {
-                background-color: $priDark;
-                cursor: pointer;
-            }
         }
     }
 }

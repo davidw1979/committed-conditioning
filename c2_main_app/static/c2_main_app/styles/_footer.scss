@@ -21,6 +21,10 @@ footer {
     color: white;
 }
 
+.footer-social > a:hover {
+    color: $priColour;
+}
+
 footer > p + p {
     margin-top: 0.8rem;
 }

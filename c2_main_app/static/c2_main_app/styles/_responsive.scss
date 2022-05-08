@@ -79,7 +79,7 @@
                 padding: 48px;
                 min-width: 280px;
                 max-width: 500px;
-                box-shadow: 0 3px 6px 0 rgba(32, 33, 36, 0.28);
+                box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
                         
                 #submit {
                     margin-bottom: 27px;
@@ -159,11 +159,6 @@
                 font-size: 1.6rem;
                 opacity: 1;
                 margin-right: 7.5%;
-                cursor: pointer;
-
-                &:hover {
-                    color: $priColour;
-                }
 
                 &:nth-child(4) {
                     margin-right: 0;
