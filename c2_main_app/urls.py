@@ -8,4 +8,5 @@ urlpatterns = [
     #Home page
     path('', views.index, name='index'),
     path('consultation', views.consultation, name='consultation'),
+    path("robots.txt", views.robots_txt),
 ]
