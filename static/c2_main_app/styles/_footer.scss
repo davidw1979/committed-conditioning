@@ -1,0 +1,30 @@
+footer {
+    background-color: $offBlack;
+    color: white;
+    @include flexCenter(column);
+    font-family: 'Oxygen', sans-serif;
+    font-size: clamp(1.2rem, calc(0.8rem + 1vw), 1.6rem);
+    padding: 3.2rem;
+    margin-top: 7.2rem;
+}
+
+.footer-social {
+    font-size: 4rem;
+    width: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 2rem;
+}
+
+.footer-social > a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-social > a:hover {
+    color: $priColour;
+}
+
+footer > p + p {
+    margin-top: 0.8rem;
+}

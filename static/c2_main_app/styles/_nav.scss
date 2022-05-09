@@ -1,0 +1,133 @@
+/****************************
+******  NAVIGATION BAR ******
+****************************/
+
+$h1FontSize: calc(2.2rem + 0.6vw);
+$strapFontSize: calc(1rem + 0.3vw);
+
+#nav-bar {
+    position: fixed;
+    padding: calc(2.4rem * var(--edge-margin-multiplyer--));
+    z-index: 3;
+    height: 110px;
+    width: 100vw;
+    background-color: $offBlack;
+    max-width: var(--large-screen--);
+    color: white;
+    @include flexCenter(row);
+    justify-content: flex-start;    
+}
+
+.nav-logo {
+    width: var(--logo-size--);
+}
+
+.branding {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+
+    h1 {
+        font-family: $headFont;
+        font-weight: $semiBold;
+        font-size: clamp(2.4rem, $h1FontSize, 3.6rem);
+        width: 12ch;
+        line-height: 0.9em;
+    }
+
+    p {
+        color: $teal;
+        font-size: clamp(10px, $strapFontSize, 14px);
+        font-weight: $light;
+        
+    }
+}
+
+.nav-links {
+    position: fixed;
+    top: 110px;
+    left: 0px;
+    background-color:$offBlack;
+    opacity: 1;
+    @include flexCenter(column);
+    align-items: center;    
+    justify-content: space-around;  
+    width: 100%;
+    height: calc(100vh - 110px);
+    clip-path: circle(100px at 125% -25%);
+    -webkit-clip-path: circle(100px at 125% -25%);
+    transition: all 0.5s ease;
+    pointer-events: none;
+    
+    .nav-link {
+        font-size: 1.8rem;
+        opacity: 0;
+        list-style-type: none;
+        cursor: pointer;
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        &:hover {
+            color: $priColour;
+        }
+
+        &:nth-child(1) {
+            transition: all 0.5s ease 0.05s;
+        }
+
+        &:nth-child(2) {
+            transition: all 0.5s ease 0.125s;
+        }
+
+        &:nth-child(3) {
+            transition: all 0.5s ease 0.2s;
+        }
+
+        &:nth-child(4) {
+            transition: all 0.5s ease 0.275s;
+        }
+    }
+
+    .fade {
+        opacity: 1;
+    }
+}
+
+.open {
+    clip-path: circle(1400px at 100% 0%);
+    -webkit-clip-path: circle(1400px at 100% 0%);
+    pointer-events: all;
+}
+
+.social {
+    @include flexCenter(row);
+    gap: 32px;
+    height: 100px;
+    display: none;
+
+    a {
+        font-size: 3.2rem;
+        text-decoration: none;
+        @include flexCenter(row);
+        justify-content: flex-end;
+        color: white;
+    }
+}
+
+.burger {
+    flex: 1;
+    @include flexCenter(column);
+    align-items: flex-end;
+
+    .line {
+        width: 40px;
+        height: 3px;
+        background-color: white;
+        margin: 6px 0;
+    }
+}

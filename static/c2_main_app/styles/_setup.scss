@@ -1,0 +1,106 @@
+/*********   CSS Custom Properties   ********/
+
+:root {
+   --pri--: rgba(110, 166, 162, 1);
+}
+
+/************   SASS Variables   ****************/
+
+$offWhite: rgba(251, 251, 251, 1);
+$priColour: rgba(110, 166, 162, 1);
+$priDark: rgba(70, 138, 133, 1);
+$offBlack: rgba(61, 61, 61, 1);
+$teal: rgba(48, 214, 176, 1);
+$fbBlue: #3b5998;
+
+/* fonts */
+$headFont: 'Raleway', sans-serif;
+$bodyFont: 'Poppins', sans-serif;
+
+$baseFontSize: 62.5%;
+
+$thin: 100;
+$extraLight: 200;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semiBold: 600;
+$bold: 700;
+$extraBold: 800;
+$heavy: 900;
+
+
+@mixin flexCenter ($direction) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {   
+    font-family: $bodyFont;
+    color: $offBlack;
+    font-size: $baseFontSize;
+    background-color: white;
+    scroll-behavior: smooth;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-family: $headFont;
+}
+
+h3 {
+    font-size: clamp(2.8rem, calc(2rem + 2.5vw), 4rem);
+    margin: 7.2rem 0;
+    font-weight: $bold;
+    text-align: center;
+}
+
+p {
+    font-weight: $light;
+}
+
+body {
+    position: relative;
+    max-width: var(--large-screen--);
+    margin: 0 auto;
+    background-color: $offWhite;
+    overscroll-behavior: none;
+
+    main {
+        background-color: $offWhite;
+    }
+}
+
+.shadow {
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.page-margins {
+    padding: 0 calc(var(--edge-margin--) * var(--edge-margin-multiplyer--));
+}
+
+.fade-out {
+    animation: fadeOut 1s ease 0s 1 forwards;
+    -webkit-animation: fadeOut 1s ease 0s 1 forwards;
+    -moz-animation: fadeOut 1s ease 0s 1 forwards;
+    -ms-animation: fadeOut 1s ease 0s 1 forwards;
+}
+
+@-webkit-keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
