@@ -34,6 +34,7 @@ def consultation(request):
             return date_suffix[date % 10]
         else:
             return date_suffix[0]
+            
 
     today = datetime.now().date()
     tomorrow = today + timedelta(days=1)
@@ -74,3 +75,13 @@ def consultation(request):
             next_four_weeks_appts.append(appt)
     
     return render(request, 'c2_main_app/consultation.html', {'this_weeks_appts': this_weeks_appts, 'next_weeks_appts': next_weeks_appts, 'next_four_weeks_appts': next_four_weeks_appts})
+
+
+@require_GET
+def robots_txt(request):
+    lines = [
+        "User-Agent: *",
+        "Disallow: /private/",
+        "Disallow: /junk/",
+    ]
+    return HttpResponse("\n".join(lines), content_type="text/plain")
