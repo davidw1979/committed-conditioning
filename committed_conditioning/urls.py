@@ -19,4 +19,5 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(('c2_main_app.urls'), namespace='index')),
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}),
 ]
