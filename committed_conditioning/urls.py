@@ -18,6 +18,11 @@ from django.contrib.sitemaps.views import sitemap
 from django.urls import path, include
 from c2_main_app.sitemaps import StaticViewSitemap
 
+
+sitemaps = {
+    'static': StaticViewSitemap
+}
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(('c2_main_app.urls'), namespace='index')),
