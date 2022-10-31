@@ -6,12 +6,13 @@
 }
 
 #landing-splash {
-    background-image: url(images/main_landing_bwimg.jpg);
+    background-image: linear-gradient(black, black), url(images/HurtLocker38.jpg);
+    background-blend-mode: saturation;
     height: calc(max(100vh, 600px));
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center;
+    background-position: right center;
 
     .filter {
         height: 100%;
